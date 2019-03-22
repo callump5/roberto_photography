@@ -1,0 +1,1 @@
+web: gunicorn roberto_photography.wsgi :app

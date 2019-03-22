@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roberto Photohraphy</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Condensed" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<body>
+
+{% block base %}
+
+{% endblock %}
+
+
+
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript">
+        $('a').addClass('link')
+    </script>
+
+    {% block body_js %}
+
+    {% endblock %}
+
+</body>
+</html>
