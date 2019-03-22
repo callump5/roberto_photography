@@ -26,8 +26,8 @@
 }
 
 html {
-    background-image: linear-gradient(to top right, #ebebeb, #fff);
-    background-size: cover;
+    background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
+    background-size: 100% auto;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -80,7 +80,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #000000;
 }
 
 #nav-body, #nav-body ul, #nav-contact {
@@ -112,19 +112,20 @@ header {
 }
 
 #landing-content {
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 #brand {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 #email-me {
     background-color: transparent;
     padding: 10px;
     margin-top: 5px;
-    border: 2px solid gray;
+    border: 2px solid #000000;
 
 }
