@@ -26,7 +26,7 @@ SECRET_KEY = 'jf25(6t^yimc&p&+#hv^mzrd295tw@sv#4rr_3o94v%8abybiq'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'roberto-avallone-photgrapher.herokuapp.com/',
+    'roberto-avallone-photgrapher.herokuapp.com',
     '127.0.0.1']
 
 
