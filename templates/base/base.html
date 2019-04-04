@@ -2,10 +2,17 @@
 
 {% block base %}
 
-    {% block content %}
+    {% include 'base/header.html' %}
+
+    <section id="content">
+
+        {% block content %}
 
 
 
-    {% endblock %}
+        {% endblock %}
+
+    </section>
+
 
 {% endblock %}

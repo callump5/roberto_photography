@@ -2,22 +2,12 @@
 
 {% block content %}
 
-    <header>
-        <div id='nav-body'>
-            <ul class="container">
-                <li><a href="">Portraits</a></li>
-                <li><a href="">Weddings</a></li>
-                <li><a href="">Food</a></li>
-                <li><a href="">Music</a></li>
-                <li><a href="">Families</a></li>
-            </ul>
-        </div>
-    </header>
+    {% include 'home/landing.html' %}
 
-    <section id="landing">
-        <div id="landing-content"  class="container">
-            <h1 id="brand">Roberto Avallone<br>Photographer.</h1>
-            <a id="email-me">Contact Me</a>
-        </div>
-    </section>
+    {% block body_js %}
+        <script type="text/javascript">
+            $('body').addClass('image-back')
+        </script>
+    {% endblock %}
+
 {% endblock %}

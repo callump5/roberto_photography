@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+
+{% block content %}
+
+    <section id="portrait-gallery">
+
+        {% for portrait in portraits %}
+            <a href="" class="link"><img class="gallery-img" src="{{ portrait.image.url }}"></a>
+        {% endfor %}
+
+    </section>
+
+
+{% endblock %}
+
+{% block body_js %}
+    <script type="text/javascript">
+        $('html').css('background-image', 'none');
+    </script>
+{% endblock %}
