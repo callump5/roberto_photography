@@ -59,12 +59,6 @@ body {
 
 .image-back {
     background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
-    position: relative;
-    float: left;
-    background-position: 50% 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
 }
 
 
