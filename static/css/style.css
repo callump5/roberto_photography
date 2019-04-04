@@ -8,6 +8,21 @@
 
     font-family: 'Raleway', sans-serif;
 
+
+
+    font-family: 'Niconne', cursive;
+
+    font-family: 'Cinzel Decorative', cursive;
+
+    font-family: 'Caudex', serif;
+
+    font-family: 'Sniglet', cursive;
+
+    font-family: 'Cutive', serif;
+
+    font-family: 'Laila', serif;
+
+
 */
 
 /* Index */
@@ -22,16 +37,24 @@
     list-style: none;
     text-decoration: none;
 
+}
+
+h1, p, a, button {
+
     font-family: 'Raleway', sans-serif;
 }
 
 html {
     background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
+
+    position: relative;
+    float: left;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    margin-bottom: 15px;
 }
+
 
 body {
     min-height: 100vh;
@@ -72,10 +95,15 @@ body {
     #email-me:hover:after {
         bottom: 5px;
     }
+
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
 /* Header */
 
 header {
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,12 +114,20 @@ header {
 #nav-body, #nav-body ul, #nav-contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 
-#nav-body, #nav-body ul {
+#nav-body ul li a {
+
+
+    font-family: 'Niconne', cursive;
+
+    font-size: 1.8em;
+}
+
+#nav-body {
     width: 100%;
 }
 
@@ -100,10 +136,14 @@ header {
     width: 35px;
 }
 
+#brand {
+    text-align: right;
+}
+
 /* Landing */
 
 #landing {
-    height: calc(100vh - 70px);
+    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -112,7 +152,6 @@ header {
 }
 
 #landing-content {
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -125,7 +164,7 @@ header {
 #email-me {
     background-color: transparent;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 17px;
     border: 2px solid #000000;
 
 }
