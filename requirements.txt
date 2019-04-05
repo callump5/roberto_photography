@@ -1,8 +1,1 @@
-Django
-Pillow
-pytz
-whitenoise
-gunicorn
-dj-database-url
-django-storages
-boto
+-r requirements/staging.txt
