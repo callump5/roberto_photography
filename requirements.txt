@@ -3,5 +3,6 @@ Pillow
 pytz
 whitenoise
 gunicorn
-django_forms_bootstrap
-django-crispy-forms
+dj-database-url
+django-storages
+boto

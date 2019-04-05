@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+from aws_login import AWS_SECRET_ACCESS_KEY as SAK
+from aws_login import AWS_ACCESS_KEY_ID as AAK
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -131,8 +134,20 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') ##specify static root
 
 
-#Media files
+# Media files
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
+
+
+# AWS
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
+
+AWS_STORAGE_BUCKET_NAME = 'roberto-photography'
+
+AWS_ACCESS_KEY_ID = AAK
+AWS_SECRET_ACCESS_KEY = SAK
