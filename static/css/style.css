@@ -170,10 +170,10 @@ header {
 }
 
 .gallery-img {
-    max-height: 500px;
-    width: 333px;
-    height: 500px;
+    max-height: 400px;
     min-height: 200px;
+    width: auto;
+    max-width: 700px;
     padding-top: 5px;
 }
 
@@ -183,4 +183,21 @@ header {
     flex-wrap: wrap;
     padding: 50px;
     justify-content: center;
+}
+
+.gallry-prj {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.gallery-prj-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 2em;
 }
