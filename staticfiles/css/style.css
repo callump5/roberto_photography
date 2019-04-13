@@ -227,10 +227,10 @@ header {
 
 /* Slide Show */
 .slide-imgs{
-    height: 150px;
-    width: auto;
     position: relative;
-    flex-wrap: wrap;
+    float: left;
+    width:  150px;
+    height: 150px;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
