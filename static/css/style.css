@@ -229,12 +229,14 @@ header {
 .slide-imgs{
     position: relative;
     float: left;
-    width:  150px;
+    max-width:  150px;
+    width: auto;
     height: 150px;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .fade {
