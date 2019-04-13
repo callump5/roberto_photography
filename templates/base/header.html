@@ -1,13 +1,14 @@
-
-    <header>
+ <header>
         <div id='nav-body'>
             <ul class="container">
-                <li><a href="/" class="link">Home</a> </li>
-                <li><a href="/portraits" class="link">Portraits</a></li>
-                <li><a href="" class="link">Weddings</a></li>
-                <li><a href="">Food</a></li>
-                <li><a href="">Music</a></li>
-                <li><a href="">Families</a></li>
+
+                <li><a href="{% url 'home' %}" class="link">Home</a></li>
+
+                {% for category in categories %}
+
+                    <li><a href="{% url 'project' category %}" class="link">{{ category }}</a></li>
+
+                {% endfor %}
             </ul>
         </div>
     </header>

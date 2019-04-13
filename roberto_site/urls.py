@@ -1,11 +1,11 @@
 from django.conf.urls import url
 
-from .views import get_home, get_portraits
+from .views import get_home, get_page
 
 urlpatterns = [
     url(r'^$', get_home, name='home'),
 
     # Portraits
 
-    url(r'^portraits/$', get_portraits, name='portraits'),
+    url(r'^(?P<category>[-\w]+)/$', get_page, name='project'),
 ]

@@ -13,57 +13,57 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RenameField(
-            model_name='portraits',
+            model_name='gallery',
             old_name='description',
             new_name='desc1',
         ),
         migrations.RenameField(
-            model_name='portraits',
+            model_name='gallery',
             old_name='image',
             new_name='image1',
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc2',
             field=models.TextField(blank=True, help_text='Only required if image 2 is uploaded', null=True),
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc3',
             field=models.TextField(blank=True, help_text='Only required if image 3 is uploaded', null=True),
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc4',
             field=models.TextField(blank=True, help_text='Only required if image 4 is uploaded', null=True),
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc5',
             field=models.TextField(blank=True, help_text='Only required if image 5 is uploaded', null=True),
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='image2',
-            field=models.ImageField(default='1', upload_to='images/portraits'),
+            field=models.ImageField(default='1', upload_to='images/gallery'),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='image3',
-            field=models.ImageField(default='1', upload_to='images/portraits'),
+            field=models.ImageField(default='1', upload_to='images/gallery'),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='image4',
-            field=models.ImageField(default='1', upload_to='images/portraits'),
+            field=models.ImageField(default='1', upload_to='images/gallery'),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='image5',
-            field=models.ImageField(default='1', upload_to='images/portraits'),
+            field=models.ImageField(default='1', upload_to='images/gallery'),
             preserve_default=False,
         ),
     ]

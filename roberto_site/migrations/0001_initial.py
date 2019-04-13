@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=400)),
-                ('image', models.ImageField(upload_to='images/portraits')),
+                ('image', models.ImageField(upload_to='images/gallery')),
             ],
             options={
                 'verbose_name': 'Families Image',
@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=400)),
-                ('image', models.ImageField(upload_to='images/portraits')),
+                ('image', models.ImageField(upload_to='images/gallery')),
             ],
             options={
                 'verbose_name': 'Food Image',
@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=400)),
-                ('image', models.ImageField(upload_to='images/portraits')),
+                ('image', models.ImageField(upload_to='images/gallery')),
             ],
             options={
                 'verbose_name': 'Music Image',
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=400)),
-                ('image', models.ImageField(upload_to='images/portraits')),
+                ('image', models.ImageField(upload_to='images/gallery')),
             ],
             options={
                 'verbose_name': 'Portrait Image',
@@ -66,7 +66,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=400)),
-                ('image', models.ImageField(upload_to='images/portraits')),
+                ('image', models.ImageField(upload_to='images/gallery')),
             ],
             options={
                 'verbose_name': 'Wedding Image',

@@ -13,23 +13,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image2',
-            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/portraits', verbose_name='Image 2'),
+            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/gallery', verbose_name='Image 2'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image3',
-            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/portraits', verbose_name='Image 3 Description'),
+            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/gallery', verbose_name='Image 3 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image4',
-            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/portraits', verbose_name='Image 4 Description'),
+            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/gallery', verbose_name='Image 4 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image5',
-            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/portraits', verbose_name='Image 5 Description'),
+            field=models.ImageField(blank=True, help_text='Optional', null=True, upload_to='images/gallery', verbose_name='Image 5 Description'),
         ),
     ]

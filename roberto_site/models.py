@@ -10,139 +10,42 @@ import os
 
 # Create your models here.
 
-class Portraits(models.Model):
-    title = models.CharField(max_length=400)
-
-    image1 = models.ImageField(u'Image 1', upload_to='images/portraits')
-    desc1 = models.TextField(u'Image 1 Description')
-
-    image2 = models.ImageField(u'Image 2', upload_to='images/portraits', blank=True, null=True, help_text='Optional')
-    desc2 = models.TextField(u'Image 2 Description',blank=True, null=True, help_text='Only required if image 2 is uploaded')
-
-    image3 = models.ImageField(u'Image 3 Description', upload_to='images/portraits', blank=True, null=True, help_text='Optional')
-    desc3 = models.TextField(u'Image 3 Description', blank=True, null=True, help_text='Only required if image 3 is uploaded')
-
-    image4 = models.ImageField(u'Image 4 Description', upload_to='images/portraits', blank=True, null=True, help_text='Optional')
-    desc4 = models.TextField(u'Image 4 Description', blank=True, null=True, help_text='Only required if image 4 is uploaded')
-
-    image5 = models.ImageField(u'Image 5 Description', upload_to='images/portraits', blank=True, null=True, help_text='Optional')
-    desc5 = models.TextField(u'Image 5 Description',blank=True, null=True, help_text='Only required if image 5 is uploaded')
+class Category(models.Model):
+    title = models.CharField(u'Category Title', max_length=300)
+    description = models.TextField(u'Category Description')
 
     def __unicode__(self):
         return self.title
 
     class Meta():
-        verbose_name = 'Portrait Image'
-        verbose_name_plural = 'Portrait Gallery'
+        verbose_name = 'Portfolio Category'
+        verbose_name_plural = 'Categories'
 
 
-class Weddings(models.Model):
 
+class Project(models.Model):
     title = models.CharField(max_length=400)
 
-    image1 = models.ImageField(u'Image 1', upload_to='images/weddings')
+    category = models.ForeignKey(Category)
+
+    image1 = models.ImageField(u'Image 1', upload_to='images/gallery')
     desc1 = models.TextField(u'Image 1 Description')
 
-    image2 = models.ImageField(u'Image 2', upload_to='images/weddings', blank=True, null=True, help_text='Optional')
+    image2 = models.ImageField(u'Image 2', upload_to='images/gallery', blank=True, null=True, help_text='Optional')
     desc2 = models.TextField(u'Image 2 Description',blank=True, null=True, help_text='Only required if image 2 is uploaded')
 
-    image3 = models.ImageField(u'Image 3 Description', upload_to='images/weddings', blank=True, null=True, help_text='Optional')
+    image3 = models.ImageField(u'Image 3 Description', upload_to='images/gallery', blank=True, null=True, help_text='Optional')
     desc3 = models.TextField(u'Image 3 Description', blank=True, null=True, help_text='Only required if image 3 is uploaded')
 
-    image4 = models.ImageField(u'Image 4 Description', upload_to='images/weddings', blank=True, null=True, help_text='Optional')
+    image4 = models.ImageField(u'Image 4 Description', upload_to='images/gallery', blank=True, null=True, help_text='Optional')
     desc4 = models.TextField(u'Image 4 Description', blank=True, null=True, help_text='Only required if image 4 is uploaded')
 
-    image5 = models.ImageField(u'Image 5 Description', upload_to='images/weddings', blank=True, null=True, help_text='Optional')
+    image5 = models.ImageField(u'Image 5 Description', upload_to='images/gallery', blank=True, null=True, help_text='Optional')
     desc5 = models.TextField(u'Image 5 Description',blank=True, null=True, help_text='Only required if image 5 is uploaded')
 
     def __unicode__(self):
-        return self.title
+        return self.title +  '-' + str(self.category)
 
     class Meta():
-        verbose_name = 'Wedding Image'
-        verbose_name_plural = 'Wedding Gallery'
-
-
-
-
-class Food(models.Model):
-    title = models.CharField(max_length=400)
-
-    image1 = models.ImageField(u'Image 1', upload_to='images/food')
-    desc1 = models.TextField(u'Image 1 Description')
-
-    image2 = models.ImageField(u'Image 2', upload_to='images/food', blank=True, null=True, help_text='Optional')
-    desc2 = models.TextField(u'Image 2 Description',blank=True, null=True, help_text='Only required if image 2 is uploaded')
-
-    image3 = models.ImageField(u'Image 3 Description', upload_to='images/food', blank=True, null=True, help_text='Optional')
-    desc3 = models.TextField(u'Image 3 Description', blank=True, null=True, help_text='Only required if image 3 is uploaded')
-
-    image4 = models.ImageField(u'Image 4 Description', upload_to='images/food', blank=True, null=True, help_text='Optional')
-    desc4 = models.TextField(u'Image 4 Description', blank=True, null=True, help_text='Only required if image 4 is uploaded')
-
-    image5 = models.ImageField(u'Image 5 Description', upload_to='images/food', blank=True, null=True, help_text='Optional')
-    desc5 = models.TextField(u'Image 5 Description',blank=True, null=True, help_text='Only required if image 5 is uploaded')
-
-
-    def __unicode__(self):
-        return self.title
-
-    class Meta():
-        verbose_name = 'Food Image'
-        verbose_name_plural = 'Food Gallery'
-
-
-
-
-class Music(models.Model):
-    title = models.CharField(max_length=400)
-
-    image1 = models.ImageField(u'Image 1', upload_to='images/music')
-    desc1 = models.TextField(u'Image 1 Description')
-
-    image2 = models.ImageField(u'Image 2', upload_to='images/music', blank=True, null=True, help_text='Optional')
-    desc2 = models.TextField(u'Image 2 Description',blank=True, null=True, help_text='Only required if image 2 is uploaded')
-
-    image3 = models.ImageField(u'Image 3 Description', upload_to='images/music', blank=True, null=True, help_text='Optional')
-    desc3 = models.TextField(u'Image 3 Description', blank=True, null=True, help_text='Only required if image 3 is uploaded')
-
-    image4 = models.ImageField(u'Image 4 Description', upload_to='images/music', blank=True, null=True, help_text='Optional')
-    desc4 = models.TextField(u'Image 4 Description', blank=True, null=True, help_text='Only required if image 4 is uploaded')
-
-    image5 = models.ImageField(u'Image 5 Description', upload_to='images/music', blank=True, null=True, help_text='Optional')
-    desc5 = models.TextField(u'Image 5 Description',blank=True, null=True, help_text='Only required if image 5 is uploaded')
-
-    def __unicode__(self):
-        return self.title
-
-    class Meta():
-        verbose_name = 'Music Image'
-        verbose_name_plural = 'Music Gallery'
-
-
-
-
-class Families(models.Model):
-    title = models.CharField(max_length=400)
-
-    image1 = models.ImageField(u'Image 1', upload_to='images/families')
-    desc1 = models.TextField(u'Image 1 Description')
-
-    image2 = models.ImageField(u'Image 2', upload_to='images/families', blank=True, null=True, help_text='Optional')
-    desc2 = models.TextField(u'Image 2 Description',blank=True, null=True, help_text='Only required if image 2 is uploaded')
-
-    image3 = models.ImageField(u'Image 3 Description', upload_to='images/families', blank=True, null=True, help_text='Optional')
-    desc3 = models.TextField(u'Image 3 Description', blank=True, null=True, help_text='Only required if image 3 is uploaded')
-
-    image4 = models.ImageField(u'Image 4 Description', upload_to='images/families', blank=True, null=True, help_text='Optional')
-    desc4 = models.TextField(u'Image 4 Description', blank=True, null=True, help_text='Only required if image 4 is uploaded')
-
-    image5 = models.ImageField(u'Image 5 Description', upload_to='images/families', blank=True, null=True, help_text='Optional')
-    desc5 = models.TextField(u'Image 5 Description',blank=True, null=True, help_text='Only required if image 5 is uploaded')
-
-    def __unicode__(self):
-        return self.title
-
-    class Meta():
-        verbose_name = 'Families Image'
-        verbose_name_plural = 'Families Gallery'
+        verbose_name = 'Project'
+        verbose_name_plural = 'Project'

@@ -2,19 +2,30 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from .models import Portraits
+from .models import Project, Category
 # Create your views here.
 
 def get_home(request):
-    return render(request, 'home/home-page.html')
-
-
-def get_portraits(request):
-
-    portraits = Portraits.objects.all()
+    categories = Category.objects.all()
+    projects = Project.objects.all()
 
     args = {
-        'portraits': portraits
+        'categories': categories,
+        'projects': projects
     }
-    return render(request, 'portraits/gallery.html', args)
+
+    return render(request, 'home/home-page.html', args)
+
+
+def get_page(request, category):
+
+
+    categories = Category.objects.all()
+    projects = Project.objects.filter(category__title__exact=category)
+
+    args = {
+        'projects': projects,
+        'categories': categories,
+    }
+    return render(request, 'gallery/gallery.html', args)
 

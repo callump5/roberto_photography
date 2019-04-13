@@ -1,0 +1,39 @@
+{% extends 'base/base.html' %}
+
+
+{% block content %}
+
+    <section id="portrait-gallery">
+
+        {% for project in projects %}
+
+            <div class="gallry-prj">
+                <h1 class="title">{{ project.title }}</h1>
+
+                <div class="gallery-prj-imgs">
+
+                     <a href="" class="link"><img class="gallery-img" src="{{ project.image1.url }}"></a>
+
+                    {% if project.image2 %}
+                        <a href="" class="link"><img class="gallery-img" src="{{ project.image2.url }}"></a>
+                    {% endif %}
+
+                    {% if project.image3 %}
+                        <a href="" class="link"><img class="gallery-img" src="{{ project.image3.url }}"></a>
+                    {% endif %}
+
+                    {% if project.image4 %}
+                        <a href="" class="link"><img class="gallery-img" src="{{ project.image4.url }}"></a>
+                    {% endif %}
+
+                    {% if project.image5 %}
+                        <a href="" class="link"><img class="gallery-img" src="{{ project.image5.url }}"></a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </section>
+
+
+{% endblock %}

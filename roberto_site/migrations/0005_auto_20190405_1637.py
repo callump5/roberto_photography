@@ -13,48 +13,48 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc1',
             field=models.TextField(verbose_name='Image 1 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc2',
             field=models.TextField(blank=True, help_text='Only required if image 2 is uploaded', null=True, verbose_name='Image 2 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc3',
             field=models.TextField(blank=True, help_text='Only required if image 3 is uploaded', null=True, verbose_name='Image 3 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc4',
             field=models.TextField(blank=True, help_text='Only required if image 4 is uploaded', null=True, verbose_name='Image 4 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='desc5',
             field=models.TextField(blank=True, help_text='Only required if image 5 is uploaded', null=True, verbose_name='Image 5 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image2',
-            field=models.ImageField(upload_to='images/portraits', verbose_name='Image 2'),
+            field=models.ImageField(upload_to='images/gallery', verbose_name='Image 2'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image3',
-            field=models.ImageField(upload_to='images/portraits', verbose_name='Image 3 Description'),
+            field=models.ImageField(upload_to='images/gallery', verbose_name='Image 3 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image4',
-            field=models.ImageField(upload_to='images/portraits', verbose_name='Image 4 Description'),
+            field=models.ImageField(upload_to='images/gallery', verbose_name='Image 4 Description'),
         ),
         migrations.AlterField(
-            model_name='portraits',
+            model_name='gallery',
             name='image5',
-            field=models.ImageField(upload_to='images/portraits', verbose_name='Image 5 Description'),
+            field=models.ImageField(upload_to='images/gallery', verbose_name='Image 5 Description'),
         ),
     ]

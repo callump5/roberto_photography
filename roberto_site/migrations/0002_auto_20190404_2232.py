@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='portraits',
+            model_name='gallery',
             name='description',
             field=models.TextField(default=1),
             preserve_default=False,

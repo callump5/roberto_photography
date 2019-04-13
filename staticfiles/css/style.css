@@ -25,7 +25,10 @@
 
 */
 
+
+
 /* Index */
+
 * {
     margin: 0;
     padding: 0;
@@ -46,9 +49,22 @@ h1, p, a, button {
 
 body {
     line-height: 1.4;
+    /* The image used */
+    background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4));
+    /* Set a specific height */
+    min-height: 90vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
+
 .gradient-back {
+
     background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4));
     position: relative;
     float: left;
@@ -57,6 +73,9 @@ body {
     background-size: cover;
 }
 
+.background-gradient{
+    background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4));
+}
 .image-back {
     background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
 }
@@ -100,6 +119,9 @@ body {
     width: 70%;
     margin: 0 auto;
 }
+
+
+
 /* Header */
 
 header {
@@ -121,9 +143,6 @@ header {
 }
 
 #nav-body ul li a {
-
-
-
     font-size: 1.6em;
 }
 
@@ -139,6 +158,8 @@ header {
 #brand {
     text-align: right;
 }
+
+
 
 /* Landing */
 
@@ -200,4 +221,65 @@ header {
 
 .title {
     font-size: 2em;
+}
+
+
+
+/* Slide Show */
+.slide-imgs{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    margin-bottom: 15px;
+}
+
+.fade {
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    0%  {opacity: 1;}
+    85% {opacity: 1;}
+    100%{opacity: 10;}
+}
+
+
+.parallax {
+  /* The image used */
+   background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
+
+  /* Set a specific height */
+  height: 250vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#intro {
+    background-color: #e2e2e2;
+    min-height: 25vh;
+    padding: 25px 0;
+}
+
+.category {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 25px;
 }
