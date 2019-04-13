@@ -227,8 +227,8 @@ header {
 
 /* Slide Show */
 .slide-imgs{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: auto;
     position: relative;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
