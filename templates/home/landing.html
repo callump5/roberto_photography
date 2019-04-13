@@ -10,46 +10,43 @@
 
     <section id="intro" class="background-gradient">
 
+        <article class="category container">
+
+            <h1 class="title">About My Work</h1>
 
             {% for cate in categories %}
-                <article class="category container">
 
-                    <h1 class="title">About My Work</h1>
+                <div class="category-text">
+                    <h2 class="title">{{ cate }}</h2>
+                    <p> {{ cate.description }}</p>
+                </div>
 
-                    <div class="category-text">
-                        <h2 class="title">{{ cate }}</h2>
-                        <p> {{ cate.description }}</p>
-                    </div>
+                <div class="category-imgs">
+                    {% for project in projects %}
+                        {% if project.category == cate %}
+                            <a href="" class="link"><img class="slide-imgs" src="{{ project.image1.url }}"></a>
 
-                    <div class="category-imgs">
-                        {% for project in projects %}
-                            {% if project.category == cate %}
-                                <a href="" class="link"><img class="slide-imgs" src="{{ project.image1.url }}"></a>
-
-                                {% if project.image2 %}
-                                    <a href="" class="link"><img class="slide-imgs" src="{{ project.image2.url }}"></a>
-                                {% endif %}
-
-                                {% if project.image3 %}
-                                    <a href="" class="link"><img class="slide-imgs" src="{{ project.image3.url }}"></a>
-                                {% endif %}
-
-                                {% if project.image4 %}
-                                    <a href="" class="link"><img class="slide-imgs" src="{{ project.image4.url }}"></a>
-                                {% endif %}
-
-                                {% if project.image5 %}
-                                    <a href="" class="link"><img class="slide-imgs" src="{{ project.image5.url }}"></a>
-                                {% endif %}
+                            {% if project.image2 %}
+                                <a href="" class="link"><img class="slide-imgs" src="{{ project.image2.url }}"></a>
                             {% endif %}
-                        {% endfor %}
-                    </div>
-                </article>
+
+                            {% if project.image3 %}
+                                <a href="" class="link"><img class="slide-imgs" src="{{ project.image3.url }}"></a>
+                            {% endif %}
+
+                            {% if project.image4 %}
+                                <a href="" class="link"><img class="slide-imgs" src="{{ project.image4.url }}"></a>
+                            {% endif %}
+
+                            {% if project.image5 %}
+                                <a href="" class="link"><img class="slide-imgs" src="{{ project.image5.url }}"></a>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
             {% endfor %}
-
+        </article>
     </section>
-
-
 </div>
 
 
