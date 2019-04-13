@@ -14,5 +14,11 @@
 
     </section>
 
+    {% if music.active %}
+     <audio id="audio2" src="{{ music.song.url }}" controls autoplay>
+    {% endif %}
+
+
+     </audio>
 
 {% endblock %}

@@ -24,7 +24,7 @@
                     </div>
 
                     <div class="category-imgs">
-                        {% for project in projects %}
+                        {% for project in projects|slice:'1' %}
                             {% if project.category == cate %}
                                 <a href="" class="link"><img class="slide-imgs" src="{{ project.image1.url }}"></a>
 

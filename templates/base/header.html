@@ -5,10 +5,25 @@
                 <li><a href="{% url 'home' %}" class="link">Home</a></li>
 
                 {% for category in categories %}
-
                     <li><a href="{% url 'project' category %}" class="link">{{ category }}</a></li>
-
                 {% endfor %}
             </ul>
+        </div>
+        <div id="socials">
+            {% if facebook %}
+                <a href="{{ facebook.link }}"><img class="social-link" src="/static/icons/013-facebook.png"></a>
+            {% endif %}
+
+            {% if insta %}
+                <a href="{{ insta.link }}"><img class="social-link" src="/static/icons/014-instagram.png"></a>
+            {% endif %}
+
+            {% if email %}
+            <a href="mailto:{{ email.link }}"><img class="social-link" src="/static/icons/043-email.png"></a>
+            {% endif %}
+
+            {% if phone %}
+            <a href="tel:{{ phone.link }}"><img class="social-link" src="/static/icons/049-agenda.png"></a>
+            {% endif %}
         </div>
     </header>

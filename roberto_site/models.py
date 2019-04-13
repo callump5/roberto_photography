@@ -2,13 +2,72 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.utils.timezone import now
-
-
-import os
-
 
 # Create your models here.
+
+
+class Facebook(models.Model):
+    link = models.CharField(max_length=600)
+
+
+    def __unicode__(self):
+        return 'Facebook Link'
+
+    class Meta():
+        verbose_name = 'Facebook Links'
+        verbose_name_plural = 'FB Links'
+
+
+class Instagram(models.Model):
+    link = models.CharField(max_length=600)
+
+
+    def __unicode__(self):
+        return 'Instagram Link'
+
+    class Meta():
+        verbose_name = 'Instagram Links'
+        verbose_name_plural = 'Insta Links'
+
+class Email(models.Model):
+    link = models.CharField(max_length=600)
+
+
+    def __unicode__(self):
+        return 'Email Address'
+
+    class Meta():
+        verbose_name = 'Email Address'
+        verbose_name_plural = 'Email'
+
+class Phone(models.Model):
+    link = models.CharField(max_length=600)
+
+
+    def __unicode__(self):
+        return 'Phone Number'
+
+    class Meta():
+        verbose_name = 'Phone Number'
+        verbose_name_plural = 'Phone'
+
+
+
+class HomeMusic(models.Model):
+    song = models.FileField()
+    active = models.BooleanField()
+
+
+    def __unicode__(self):
+        return 'Music'
+
+    class Meta():
+        verbose_name = 'Music'
+        verbose_name_plural = 'Songs'
+
+
+
+
 
 class Category(models.Model):
     title = models.CharField(u'Category Title', max_length=300)

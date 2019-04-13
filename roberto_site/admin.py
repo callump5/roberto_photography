@@ -3,9 +3,14 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import Project, Category
+from .models import Facebook, Instagram, Email, Phone, Project, Category, HomeMusic
 
 # Register your models here.
 
 admin.site.register(Project)
 admin.site.register(Category)
+admin.site.register(Instagram)
+admin.site.register(Facebook)
+admin.site.register(Phone)
+admin.site.register(Email)
+admin.site.register(HomeMusic)
