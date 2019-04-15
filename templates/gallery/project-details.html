@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+
+    <section id="portrait-gallery" class="container">
+
+        <h1 class="title">{{ project.title }}</h1>
+
+        <div class="project-item">
+            <img class="project-img" src="{{ project.image1.url }}">
+            <p>{{ project.desc1 }}</p>
+        </div>
+
+        <div class="project-item">
+            {% if project.image2 %}
+                <img class="project-img" src="{{ project.image2.url }}">
+                {% if project.desc2 %}
+                    <p>{{ project.desc2 }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="project-item">
+            {% if project.image3 %}
+                <img class="project-img" src="{{ project.image3.url }}">
+                {% if project.desc3 %}
+                    <p>{{ project.desc3 }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="project-item">
+            {% if project.image4 %}
+                <img class="project-img" src="{{ project.image4.url }}">
+                {% if project.desc4 %}
+                    <p>{{ project.desc4 }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="project-item">
+            {% if project.image5 %}
+                <img class="project-img" src="{{ project.image5.url }}">
+                {% if project.desc5 %}
+                    <p>{{ project.desc5 }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+    <script type="text/javascript">
+        $('body').removeClass('parallax')
+    </script>
+
+    </section>
+
+
+{% endblock %}
+

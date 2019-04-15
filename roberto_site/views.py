@@ -79,3 +79,33 @@ def get_page(request, category):
 
     return render(request, 'gallery/gallery.html', args)
 
+
+def get_project(request, category, project_id):
+
+
+    categories = Category.objects.all()
+    facebook = Facebook.objects.all().first()
+    insta = Instagram.objects.all().first()
+    phone = Phone.objects.all().first()
+    email = Email.objects.all().first()
+    music = HomeMusic.objects.filter(active=True).first()
+
+
+    project_category = Category.objects.filter(title__exact=category).first()
+
+    project = Project.objects.get(pk=project_id)
+
+
+    args = {
+        'facebook': facebook,
+        'insta': insta,
+        'phone': phone,
+        'email': email,
+        'categories': categories,
+        'category': project_category,
+        'project': project,
+        'music': music,
+    }
+
+
+    return render(request, 'gallery/project-details.html', args)
