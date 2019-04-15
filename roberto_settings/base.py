@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'roberto_site'
+    'roberto_site',
+    'django_forms_bootstrap'
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,26 @@ AWS_S3_SECURE_URLS = True       # use http instead of https
 AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
 
 AWS_STORAGE_BUCKET_NAME = 'roberto-photography'
+
+
+
+# Email
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'avallone.photography@gmail.com'
+EMAIL_HOST_PASSWORD = 'Bossman1!'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
+

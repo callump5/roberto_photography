@@ -42,9 +42,13 @@
 
 }
 
-h1, p, a, button {
+h1, p, a, button, label, text, textarea, input {
 
     font-family: 'Raleway', sans-serif;
+}
+
+form .helptext, form br, .help-block{
+    display: none
 }
 
 body {
@@ -62,10 +66,14 @@ body {
 }
 
 
+.page {
+    min-height:80vh;
+}
+
 
 .gradient-back {
 
-    background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4));
+    background-image: linear-gradient(to top right, rgba(134, 134, 134, 0.14), rgba(255, 255, 255, 0.4));
     position: relative;
     float: left;
     background-position: 50% 10%;
@@ -82,7 +90,8 @@ body {
 
 
  a:hover {
-        text-decoration: none;
+     text-decoration: none;
+     color: #000000;;
     }
 
     .link{
@@ -237,6 +246,14 @@ header {
     font-size: 2em;
 }
 
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
 
 
 /* Slide Show */
@@ -269,7 +286,7 @@ header {
    background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
 
   /* Set a specific height */
-  height: 250vh;
+  min-height: 150vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -280,7 +297,7 @@ header {
 
 
 #intro {
-    background-color: #e2e2e2;
+    background-color: #ffffff;
     min-height: 25vh;
     padding: 25px 0;
 }
@@ -306,4 +323,21 @@ header {
     position: fixed;
     bottom: 0;
     width: 100vw;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 75px;
+}
+
+#contact-btn {
+    border: 1px solid;
+}
+
+#contact-btn:hover {
+background-color: rgba(255, 255, 255, 0.69);
+    transition: background-color 1000ms linear;
 }

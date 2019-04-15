@@ -6,6 +6,8 @@ from django.db import models
 # Create your models here.
 
 
+# Social Links
+
 class Facebook(models.Model):
     link = models.CharField(max_length=600)
 
@@ -52,6 +54,7 @@ class Phone(models.Model):
         verbose_name_plural = 'Phone'
 
 
+# Site Music
 
 class HomeMusic(models.Model):
     song = models.FileField()
@@ -67,7 +70,24 @@ class HomeMusic(models.Model):
 
 
 
+# Contact Request
 
+class ContactRequest(models.Model):
+    name = models.CharField(u'Full Name', help_text='Please enter your full name', max_length=400)
+    number = models.CharField(u'Contact Number', help_text='Please enter your contact number', max_length=11)
+    email = models.CharField(u'Email Address', help_text='Please enter your Email address', max_length=400)
+    message = models.TextField(u'Message', help_text='How can I help?')
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta():
+        verbose_name = 'Contact Request'
+        verbose_name_plural ='Contact Requests'
+
+
+
+# Project Category
 
 class Category(models.Model):
     title = models.CharField(u'Category Title', max_length=300)
@@ -81,6 +101,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
 
+# Projects
 
 class Project(models.Model):
     title = models.CharField(max_length=400)

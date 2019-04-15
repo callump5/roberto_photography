@@ -1,0 +1,25 @@
+<section id="contact" class="page">
+
+    <h1 class="title">Get In Touch!</h1>
+
+    <div class="flex mynowrap">
+        <div id='contact-form' class="form">
+            <form class='form' method="POST">
+                {% csrf_token %}
+
+
+                {% load bootstrap_tags %}
+                {{ form| as_bootstrap}}
+
+                <div class="gdpr">
+                    <input type="checkbox"  id="tick" onchange="document.getElementById('contact-btn').disabled = !this.checked;" />
+                    <p>By using this form you agree with the storage and handling of your data by this website.</p>
+                </div>
+
+                <button type="submit" class="btn" name="contact-btn" id="contact-btn" disabled>Contact Me!</button>
+
+            </form>
+        </div>
+    </div>
+
+</section>
