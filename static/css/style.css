@@ -33,23 +33,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-size: 20px;
-    font-weight: bold;
     color: #1a1a1a;
     list-style: none;
     text-decoration: none;
 
 }
 
-h1, p, a, button, label, text, textarea, input {
+h1, p, a, button, label, text, textarea, input, button, .btn, #contact-btn {
 
     font-family: 'Raleway', sans-serif;
+
+    color: #000000;
 }
 
 form .helptext, form br, .help-block{
     display: none
 }
+
+label {font-weight: bold}
 
 body {
     line-height: 1.4;
@@ -67,7 +69,8 @@ body {
 
 
 .page {
-    min-height:80vh;
+    min-height: 25vh;
+    padding: 25px 0;
 }
 
 
@@ -218,6 +221,7 @@ header {
     width: auto;
     max-width: 700px;
     padding-top: 5px;
+    margin: 0 2px;
 }
 
 #portrait-gallery {
@@ -298,8 +302,6 @@ h2 {
 
 #intro {
     background-color: #ffffff;
-    min-height: 25vh;
-    padding: 25px 0;
 }
 
 .category {
@@ -334,10 +336,22 @@ h2 {
 }
 
 #contact-btn {
-    border: 1px solid;
+    border: 1px solid #1a1a1a;
 }
 
 #contact-btn:hover {
 background-color: rgba(255, 255, 255, 0.69);
     transition: background-color 1000ms linear;
+}
+
+.gdpr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#tick {
+    margin-right: 10px;
 }
