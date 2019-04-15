@@ -16,11 +16,11 @@ def get_home(request):
     categories = Category.objects.all()
     projects = Project.objects.all()
 
-    facebook = Facebook.objects.get(pk=1)
-    insta = Instagram.objects.get(pk=1)
-    phone = Phone.objects.get(pk=1)
-    email = Email.objects.get(pk=3)
-    music = HomeMusic.objects.get(pk=1)
+    facebook = Facebook.objects.all().first()
+    insta = Instagram.objects.all().first()
+    phone = Phone.objects.all().first()
+    email = Email.objects.all().first()
+    music = HomeMusic.objects.filter(active=True).first()
 
 
     if request.method == 'POST':
@@ -60,11 +60,11 @@ def get_page(request, category):
     categories = Category.objects.all()
     projects = Project.objects.filter(category__title__exact=category).all()
 
-    facebook = Facebook.objects.get(pk=1)
-    insta = Instagram.objects.get(pk=1)
-    phone = Phone.objects.get(pk=1)
-    email = Email.objects.get(pk=1)
-    music = HomeMusic.objects.get(pk=1)
+    facebook = Facebook.objects.all().first()
+    insta = Instagram.objects.all().first()
+    phone = Phone.objects.all().first()
+    email = Email.objects.all().first()
+    music = HomeMusic.objects.filter(active=True).first()
 
 
     args = {
