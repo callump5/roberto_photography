@@ -58,7 +58,7 @@ def get_home(request):
 def get_page(request, category):
 
     categories = Category.objects.all()
-    projects = Project.objects.all()
+    projects = Project.objects.filter(category__title__exact=category).all()
 
     facebook = Facebook.objects.get(pk=1)
     insta = Instagram.objects.get(pk=1)
