@@ -19,7 +19,7 @@ def get_home(request):
     facebook = Facebook.objects.get(pk=1)
     insta = Instagram.objects.get(pk=1)
     phone = Phone.objects.get(pk=1)
-    email = Email.objects.get(pk=2)
+    email = Email.objects.get(pk=3)
     music = HomeMusic.objects.get(pk=1)
 
 
