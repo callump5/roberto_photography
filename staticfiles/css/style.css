@@ -88,7 +88,7 @@ body {
     background-image: linear-gradient(to top right, rgba(255, 255, 255, 1), rgb(180, 180, 180));
 }
 .image-back {
-    background-image: url("/static/camera-macro-optics-122400.jpg");
+    background-image: url("/static/images/black-and-white-black-and-white-body-kit-905482.jpg");
 }
 
 
@@ -287,14 +287,14 @@ h2 {
 
 .parallax {
   /* The image used */
-   background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/camera-macro-optics-122400.jpg");
+   background-image: linear-gradient(to top right, rgba(24, 24, 24, 0.4), rgba(255, 255, 255, 0.4)), url("/static/images/4k-wallpaper-camera-camera-lens-1251910.jpg");
 
   /* Set a specific height */
   min-height: 150vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
