@@ -78,7 +78,7 @@ body {
 
     background-image: linear-gradient(to top right, rgba(255, 255, 255, 1), rgb(180, 180, 180));
     position: relative;
-    float: left;
+    float: revert;
     background-position: 50% 10%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -294,7 +294,7 @@ h2 {
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
