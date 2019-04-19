@@ -9,7 +9,7 @@ from smtplib import SMTPAuthenticationError
 
 from .send_email import send_contact_request, authError
 from .forms import ContactForm
-from .models import Project, Category, Facebook, Instagram, Email, Phone, HomeMusic
+from .models import Project, Category, Facebook, Instagram, Email, Phone, HomeMusic, Background
 # Create your views here.
 
 def get_home(request):
@@ -21,6 +21,7 @@ def get_home(request):
     phone = Phone.objects.all().first()
     email = Email.objects.all().first()
     music = HomeMusic.objects.filter(active=True).first()
+    background = Background.objects.filter().first()
 
 
     if request.method == 'POST':
@@ -49,7 +50,8 @@ def get_home(request):
         'categories': categories,
         'projects': projects,
         'music': music,
-        'form': contact_request
+        'form': contact_request,
+        'background': background
     }
 
     return render(request, 'home/home-page.html', args)
@@ -65,6 +67,7 @@ def get_page(request, category):
     phone = Phone.objects.all().first()
     email = Email.objects.all().first()
     music = HomeMusic.objects.filter(active=True).first()
+    background = Background.objects.filter().first()
 
 
     args = {
@@ -75,6 +78,7 @@ def get_page(request, category):
         'categories': categories,
         'projects': projects,
         'music': music,
+        'background': background
     }
 
     return render(request, 'gallery/gallery.html', args)

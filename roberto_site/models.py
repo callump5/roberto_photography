@@ -6,6 +6,20 @@ from django.db import models
 # Create your models here.
 
 
+# Background Image
+
+class Background(models.Model):
+    image = models.ImageField(u'Background Image', upload_to='images/background')
+
+
+    def __unicode__(self):
+        return 'Background Image'
+
+    class Meta():
+        verbose_name = 'Background Image'
+        verbose_name_plural = 'Background images'
+
+
 # Social Links
 
 class Facebook(models.Model):
